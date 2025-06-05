@@ -1,0 +1,22 @@
+pandas
+mlflow
+notebook
+numpy
+scikit-learn
+scipy
+matplotlib
+python-box==6.0.2
+pyYAML
+tqdm
+joblib
+ensure==1.0.2
+Flask
+Flask-Cors
+types-pyYAML
+
+# Additional packages 
+setuptools
+
+
+# -e . - is to ensure that the repo is used as a local package.
+-e . # looks for setup.py - for local package installation and config.
