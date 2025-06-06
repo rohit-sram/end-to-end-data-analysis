@@ -19,8 +19,8 @@ class ModelTrainerPipeline:
 if __name__ == '__main__':
     try:
         logger.info(f"Stage: {STAGE_NAME} - started")
-        valid = ModelTrainerPipeline()
-        valid.main()
+        trainer = ModelTrainerPipeline()
+        trainer.main()
         logger.info(f"Stage: {STAGE_NAME} - completed")
     
     except Exception as e:
