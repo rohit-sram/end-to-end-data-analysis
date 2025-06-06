@@ -3,6 +3,7 @@ from mlflow_project.pipeline.stage_01_data_ingestion import DataIngestionPipelin
 from mlflow_project.pipeline.stage_02_data_validation import DataValidationPipeline
 from mlflow_project.pipeline.stage_03_data_transformation import DataTransformationPipeline
 from mlflow_project.pipeline.stage_04_model_trainer import ModelTrainerPipeline
+from mlflow_project.pipeline.stage_05_model_evaluation import ModelEvaluationPipeline
 # logger.info("Welcome to our project!")
 
 
@@ -51,6 +52,18 @@ try:
     logger.info(f"Stage: {STAGE_NAME} - started")
     valid = ModelTrainerPipeline()
     valid.main()
+    logger.info(f"Stage: {STAGE_NAME} - completed")
+
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+# 05 STAGE - EVALUATION
+STAGE_NAME = "Stage 5 - Model Evaluation"
+try:
+    logger.info(f"Stage: {STAGE_NAME} - started")
+    eval = ModelEvaluationPipeline()
+    eval.main()
     logger.info(f"Stage: {STAGE_NAME} - completed")
 
 except Exception as e:
